@@ -9,9 +9,42 @@
 <h:head>
 	<f:facet name="first">
 		<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
-		<link rel="shortcut icon" type="image/png" href="#{path}/LogoJR.png" />
+		<link rel="shortcut icon" type="image/png" href="logo.png" />
 		<title>DonaSangre</title>
+		<h:outputStylesheet name="components.css" library="primefaces" />
+		<link rel="stylesheet" href="resources/css/custom.css"/>
+		
 	</f:facet>
-	<ui:insert name="content" />
 </h:head>
+<body>
+	 <p:layout fullPage="true" widgetVar="layoutWidget" >
+		<p:layoutUnit position="north" size="50" resizable="false" closable="false" gutter="0">
+			<ui:include src="header.xhtml"/>
+		</p:layoutUnit>
+		<p:layoutUnit position="west" size="200" closable="true" collapsible="true" id="asd" gutter="0">
+			<ui:include src="menuLateral.xhtml"/>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center" resizable="false" gutter="">
+			<ui:insert name="content" />
+			<p:separator />
+			<ui:insert name="pie" />
+		</p:layoutUnit>
+		
+	</p:layout> 
+
+<!-- 	<div class="ui-g"> -->
+<!-- 		<div class="ui-g-12">Menu Superior</div> -->
+<!-- 		<div class="ui-g-1 ui-md-1 menu-lateral"> -->
+<!-- 			<ui:include src="menulateral.xhtml"></ui:include> -->
+<!-- 		</div> -->
+<!-- 		<div class="ui-g-11 ui-md-11"> -->
+<!-- 			<div class="ui-md-12 ">Contenido</div> -->
+<!-- 			<div class="ui-md-12">Pie</div> -->
+<!-- 		</div> -->
+		
+<!-- 	</div> -->
+
+
+</body>
 </html>

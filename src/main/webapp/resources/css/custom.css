@@ -8,3 +8,7 @@
 .ui-g {
 	margin-left: -10px;
 }
+
+.ui-layout-toggler{
+	display:none !important;
+}

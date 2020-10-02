@@ -23,6 +23,15 @@
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 
+	<!-- para evitar tener toda la navegacion en un unico faces-config, podemos 
+		partilos en varios -->
+	<context-param>
+		<param-name>javax.faces.CONFIG_FILES</param-name>
+		<param-value>
+			WEB-INF/faces-config.xml,
+			WEB-INF/navegacion/index.xml</param-value>
+	</context-param>
+
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
 		<param-value>afterdark</param-value>
